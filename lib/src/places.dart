@@ -675,6 +675,8 @@ class PlaceDetails {
 
   final String? website;
 
+  final num? user_ratings_total;
+
   @JsonKey(defaultValue: <Review>[])
   final List<Review> reviews;
 
@@ -702,6 +704,7 @@ class PlaceDetails {
     this.url,
     this.vicinity,
     this.website,
+    this.user_ratings_total,
     this.geometry,
   });
 

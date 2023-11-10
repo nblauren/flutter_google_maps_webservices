@@ -130,6 +130,7 @@ PlaceDetails _$PlaceDetailsFromJson(Map<String, dynamic> json) => PlaceDetails(
       url: json['url'] as String?,
       vicinity: json['vicinity'] as String?,
       website: json['website'] as String?,
+      user_ratings_total: json['user_ratings_total'] as num?,
       geometry: json['geometry'] == null
           ? null
           : Geometry.fromJson(json['geometry'] as Map<String, dynamic>),
@@ -157,6 +158,7 @@ Map<String, dynamic> _$PlaceDetailsToJson(PlaceDetails instance) =>
       'vicinity': instance.vicinity,
       'utc_offset': instance.utcOffset,
       'website': instance.website,
+      'user_ratings_total': instance.user_ratings_total,
       'reviews': instance.reviews,
       'geometry': instance.geometry,
     };
